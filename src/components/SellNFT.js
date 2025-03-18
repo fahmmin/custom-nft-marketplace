@@ -51,7 +51,7 @@ export default function SellNFT () {
             //upload the file to IPFS
             disableButton();
             updateMessage("Uploading image.. please dont click anything!")
-            const response = await uploadFileToIPFS(file);
+            const response = await uploadFileToIPFS(file,formParams.contractId);
             if(response.success === true) {
                 enableButton();
                 updateMessage("")
